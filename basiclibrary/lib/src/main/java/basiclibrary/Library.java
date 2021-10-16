@@ -25,7 +25,13 @@ public class Library {
                 {65, 56, 55, 52, 55, 62, 57}
         };
 
-       System.out.println(averages(weeklyMonthTemperatures));
+//       System.out.println(averages(weeklyMonthTemperatures));
+        int [] lowestArrayAverage = arraysofArrays(weeklyMonthTemperatures);
+       for (int item :lowestArrayAverage ){
+            System.out.println(item);
+
+        }
+        System.out.println("the average of lowest array average: "+average(lowestArrayAverage));
 
     }
 
@@ -52,7 +58,7 @@ public class Library {
         return false;
     }
 
-    static int averages(int [][] arrays){
+    static int [] arraysofArrays(int [][] arrays){
         int average;
         ArrayList<Integer> arrayOfAverages = new ArrayList<Integer>();
 
@@ -66,16 +72,26 @@ public class Library {
 
         }
         average = arrayOfAverages.get(0);
+        int [] lowArray = arrays[0];
         for (int i = 1; i < arrays.length;i++){
            if (average > arrayOfAverages.get(i)){
-               average = arrayOfAverages.get(i);
+               lowArray = arrays[i];
            }
 
         }
 
-        return average;
+        return lowArray;
 
     }
 
+    static int average(int [] array) {
+        int total = 0;
+        for (int num : array){
+            total+=num;
+        }
 
+     int average = (total/array.length);
+        return average;
+
+    }
 }

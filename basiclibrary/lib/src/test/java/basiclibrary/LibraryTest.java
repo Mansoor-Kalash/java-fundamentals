@@ -27,7 +27,7 @@ public class LibraryTest {
         assertEquals(true,Library.containsDuplicates(arr1));
         assertEquals(false,Library.containsDuplicates(arr2));
     }
-    @Test public void averagesTest (){
+    @Test public void arraysofArraysTest (){
 
         int[][] arr = {
                 {1, 1, 1, 1, 1, 1, 1},
@@ -35,8 +35,15 @@ public class LibraryTest {
                 {55, 54, 60, 53, 59, 57, 61},
                 {65, 56, 55, 52, 55, 62, 57}
         };
+        int [] arrayShouldReturn = {1, 1, 1, 1, 1, 1, 1};
 
-        assertEquals(1,Library.averages(arr));
+        assertArrayEquals(arrayShouldReturn,Library.arraysofArrays(arr));
+
 
     }
+    @Test public void averageTest (){
+        int [] array = {1, 1, 1, 1, 1, 1, 1};
+        assertEquals(1,Library.average(array));
+    }
+
 }
