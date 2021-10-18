@@ -31,6 +31,7 @@ Methode:
 
 
 
+inheritance
 
 
 **class**
@@ -43,6 +44,7 @@ Methode:
 * addReview
 * updateStars
 * toString
+
 
 2. Rreview
 
