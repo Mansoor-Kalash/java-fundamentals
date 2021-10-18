@@ -1,8 +1,9 @@
 # java-fundamentals
 
-## Files 
+## Folder 
 
-1. ### Main.java
+
+1. ### basic
 
 * ***Main.java***
 
@@ -12,5 +13,39 @@ Methodes:
 3. Clock
 
 
+2. ### basiclibrary
+* ***gradel***
+
+***in main***
+
+Methode:
+
+1. roll
+2. containsDuplicates
+3. averages
+
+***in Test***
+1. rollTest
+2. containsDuplicatesTest
+3. averagesTest
 
 
+
+
+
+**class**
+
+1. Restsurant
+
+**method**
+* getPriceCategory
+* setPriceCategory
+* addReview
+* updateStars
+* toString
+
+2. Rreview
+
+**method**
+* getRate
+* toString
