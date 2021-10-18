@@ -31,5 +31,23 @@ Methode:
 
 
 
+inheritance
 
 
+**class**
+
+1. Restsurant
+
+**method**
+* getPriceCategory
+* setPriceCategory
+* addReview
+* updateStars
+* toString
+
+
+2. Rreview
+
+**method**
+* getRate
+* toString
