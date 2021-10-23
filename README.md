@@ -33,7 +33,7 @@ Methode:
 
 inheritance
 
-
+# inheritance
 **class**
 
 1. Restsurant
@@ -51,3 +51,45 @@ inheritance
 **method**
 * getRate
 * toString
+
+# inheritance 2
+
+**class**
+
+1. Project.
+
+**Method**
+
+* addReview.
+* updateStars.
+* toString.
+
+2. Restsurant.
+
+**Method**
+
+1. getPriceCategory.
+2. setPriceCategory.
+3. toString.
+
+3. Rreview.
+
+**Method**
+
+1. getRate.
+2. toString.
+
+4. Shop.
+
+**Method**
+
+1. toString.
+
+5. Theater.
+
+**Method**
+
+1. addMovie.
+2. removeMovie.
+3. addReview.
+4. toString.
