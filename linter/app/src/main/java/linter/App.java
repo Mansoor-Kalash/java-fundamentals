@@ -40,7 +40,7 @@ public class App {
         System.out.println(winner + " received the most votes!");
 
         String path = "grates.txt";
-        file(path);
+        System.out.println(file(path));
 
     }
 
@@ -87,8 +87,9 @@ public class App {
         return winner;
     }
 
-    static void file (String filePath) {
+    static String file (String filePath) {
         Path path = Paths.get(filePath);
+        String error ="";
         try {
             int lineNumber = 1;
 
@@ -98,9 +99,8 @@ public class App {
                 if (line.indexOf("{")==-1&&line.indexOf("}")==-1&&
                         line.indexOf("if")==-1&&line.indexOf("else")==-1&&line.lastIndexOf(";")==-1&&
                     line.matches(".*\\w.*")){
-                        System.out.println("Line "+lineNumber+": Missing semicolon.");
+                        error +="Line "+lineNumber+": Missing semicolon.\n";
                 }
-//                System.out.println(line);
                 line = reader.readLine();
                 lineNumber+=1;
             }
@@ -108,7 +108,7 @@ public class App {
             e.printStackTrace();
         }
 
-
+return error;
 
     }
 
