@@ -11,4 +11,31 @@ public class LibraryTest {
         Library classUnderTest = new Library();
 //        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
+@Test void testRemove (){
+    Restaurant restaurant = new Restaurant("grillMark");
+    Shop shop = new Shop("market","food in grill", 4);
+    Theater theater = new Theater("theater");
+
+    restaurant.setPriceCategory("Burger",5);
+    restaurant.setPriceCategory("Zinger",3);
+
+    theater.addMovie("12 angry men");
+    theater.addMovie("knives out");
+    shop.addReview("mohammad","cool",3);
+
+//
+    assertEquals(2,theater.getMovies().size());
+    theater.removeMovie("knives out");
+    assertEquals(1,theater.getMovies().size());
+    assertEquals(1,1);
+    assertEquals(3,shop.getStarsNumnber());
+    restaurant.addReview("mansoor","good",4);
+    assertEquals(4,restaurant.getStarsNumnber());
+
+
+
+
+
+
+}
 }

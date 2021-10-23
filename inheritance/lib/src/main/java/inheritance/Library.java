@@ -8,39 +8,64 @@ import java.util.Scanner;
 public class Library {
     public static void main(String[] args) {
         // create a Restaurant
-        Scanner input = new Scanner(System.in);
+//        Scanner input = new Scanner(System.in);
+//
+//        System.out.println("Create your new Restsurant please write a name");
+//        String newRestaurant = input.nextLine();
+//
+//
+//
+//        Restaurant newResaurant = new Restaurant(newRestaurant);
+//
+//        newResaurant.setPriceCategory("Shawerma",2);
+//        newResaurant.setPriceCategory("Potato",1);
+//
+//        System.out.println("Add review");
+//        System.out.println("Please Enter Your Name");
+//        String userName = input.nextLine();
+//
+//        System.out.println("Please Enter Your Review");
+//        String theReview = input.nextLine();
+//
+//        System.out.println("Please Enter Your Rate from 0 to 5");
+//        int userRatting = input.nextInt();
+//        while (userRatting > 5){
+//            System.out.println("Should be from 0 to 5");
+//            userRatting = input.nextInt();
+//        }
+//
+//        newResaurant.addReview(userName,theReview,userRatting);
+//
+//        newResaurant.addReview("mansoor","nice",5);
+//        newResaurant.addReview("mohammad","cool",4);
+//
+//        System.out.println( newResaurant.getPriceCategory());
+//        System.out.println(newResaurant.toString());
+//        Theater theater = new Theater("theater");
+//-----------------------------
+        Restaurant restaurant = new Restaurant("grillMark");
+        Shop shop = new Shop("market","food in grill", 4);
+        Theater theater = new Theater("theater");
+        //-----------------------------
+        restaurant.setPriceCategory("Burger",5);
+        restaurant.setPriceCategory("Zinger",3);
 
-        System.out.println("Create your new Restsurant please write a name");
-        String newRestaurant = input.nextLine();
+        theater.addMovie("12 angry men");
+        theater.addMovie("knives out");
+//-----------------------------
+        restaurant.addReview("mansoor","good",4);
+        shop.addReview("mohammad","cool",3);
+theater.addReview("ahmad","nice",5);
+theater.addReview("mamoon","12 angry men","not good",2);
+
+theater.removeMovie("12 angry men");
+//-----------------------------
 
 
 
-        Restaurant newResaurant = new Restaurant(newRestaurant);
-
-        newResaurant.setPriceCategory("Shawerma",2);
-        newResaurant.setPriceCategory("Potato",1);
-
-        System.out.println("Add review");
-        System.out.println("Please Enter Your Name");
-        String userName = input.nextLine();
-
-        System.out.println("Please Enter Your Review");
-        String theReview = input.nextLine();
-
-        System.out.println("Please Enter Your Rate from 0 to 5");
-        int userRatting = input.nextInt();
-        while (userRatting > 5){
-            System.out.println("Should be from 0 to 5");
-            userRatting = input.nextInt();
-        }
-
-        newResaurant.addReview(userName,theReview,userRatting);
-
-        newResaurant.addReview("mansoor","nice",5);
-        newResaurant.addReview("mohammad","cool",4);
-
-        System.out.println( newResaurant.getPriceCategory());
-        System.out.println(newResaurant.toString());
+        System.out.println(restaurant.toString());
+        System.out.println(shop.toString());
+        System.out.println(theater.toString());
 
 
     }
